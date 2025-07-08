@@ -1,0 +1,27 @@
+body 	{background-color: black;
+	}
+
+h1 	{color: yellow;
+	 text-align: center
+	 }
+
+h3	{color: blue;
+	 text-align: center
+	}
+
+img { width: 400px
+	}
+
+th	{color:white
+	}
+
+.info	{text-align: center;
+	background-color: yellow
+	}
+
+.york	{width:340px
+	}
+
+.space {padding-left: 25px;
+	padding-right: 25px
+	}
