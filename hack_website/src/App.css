@@ -19,19 +19,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(20px + 2vmin);
-  color: #f94a4a;
+  font-size: calc(30px + 3vmin);
+  color: #000000;
 }
 
 .App-link {
-  color: #f94a4a;
+  color: hsl(0, 0%, 0%);
 }
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */

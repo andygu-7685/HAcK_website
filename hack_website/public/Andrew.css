@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    padding: 50px;
+    border: 20px solid rgba(255, 255, 255, 0.5);
+    background: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXk3Nm9pZ3pxNXhoYm9mamI3cTBxNmF6emZjOXN6NzhxMXNiM2R0YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/qcMPqPnwR69FfbAqUk/giphy.gif) center/cover;
+    background-clip: content-box;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+h1 {
+    
+}

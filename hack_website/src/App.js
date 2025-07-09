@@ -5,7 +5,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>Hello and welcome to our website </p>
-        <p>Please click one the following links to view our personal bios:</p>
+        <p>Please click one of the following links to view our personal bios:</p>
         <a
           className="App-link"
           href="Alex.html"
