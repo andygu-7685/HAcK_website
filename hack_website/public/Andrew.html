@@ -26,6 +26,54 @@
         <img src="Snowboarding.png" alt="Description 3">
         <div class="caption">Snowboarding every season!</div>
         </div>
+        <div class="slide fade">
+        <img src="Hockey.png" alt="Description 4">
+        <div class="caption">Go Kings Go!</div>
+        </div>
+        <div class="slide fade">
+        <img src="Flamethrower.png" alt="Description 5">
+        <div class="caption">Definitely just a Nerf gun....</div>
+        </div>
+        <div class="slide fade">
+        <img src="GearPlate.png" alt="Description 6">
+        <div class="caption">Built a gear plate for the fridge</div>
+        </div>
+        <div class="slide fade">
+        <img src="SuperCharger.png" alt="Description 7">
+        <div class="caption">Supercharged the 4runner!</div>
+        </div>
+        <div class="slide fade">
+        <img src="Wedding.png" alt="Description 8">
+        <div class="caption">Best chapter in my life!!</div>
+        </div>
+        <div class="slide fade">
+        <img src="Sequoia.png" alt="Description 9">
+        <div class="caption">Love camping #Sequoia</div>
+        </div>
+        <div class="slide fade">
+        <img src="Supra.png" alt="Description 10">
+        <div class="caption">Is that a Supra?!</div>
+        </div>
+        <div class="slide fade">
+        <img src="NSX.png" alt="Description 11">
+        <div class="caption">Dream Car #NSX</div>
+        </div>
+        <div class="slide fade">
+        <img src="GTR.png" alt="Description 12">
+        <div class="caption">A flying brick!</div>
+        </div>
+        <div class="slide fade">
+        <img src="Milspec.png" alt="Description 13">
+        <div class="caption">Making a Milspec harness</div>
+        </div>
+        <div class="slide fade">
+        <img src="EngineHarness.png" alt="Description 14">
+        <div class="caption">Finished up a standard harness</div>
+        </div>
+        <div class="slide fade">
+        <img src="GBody.png" alt="Description 15">
+        <div class="caption">Just installed the engine/transaxle</div>
+        </div>
     
         
         <button class="prev">&#10094;</button>
@@ -40,40 +88,27 @@
     </div>
 
     <script>
-    let slideIndex = 0;
-    function showSlides() {
+        let slideIndex = 0;
 
-      const slides = document.getElementsByClassName("slide");
-      const dots = document.getElementsByClassName("dot");
-
-            for (let i = 0; i < slides.length;i++) {
-                slides[i].style.display = "none";
-            }
-            
-            slideIndex++;
-            if (slideIndex > slides.length)
-            {slideIndex =1}
-
-            for (let i = 0; i < dots.length; i++) {
-                dots[i].className.replace(" active","");
-            }
-
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-
-            setTime(showSlides, 10);
-    }
-
-        function plusSlides(n) {
-            slideIndex += n;
-            showSlides();
+        function moveSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            slideIndex = (slideIndex + n + slides.length) % slides.length;
+            updateSlides();
         }
 
-        function currentSlide(n) {
-            slideIndex = n;
-            showSlides();
+        function updateSlides() {
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach((slide, index) => {
+                slide.style.display = index === slideIndex ? "block" : "none";
+            });
         }
-    showSlides();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateSlides();
+
+            document.querySelector('.next').addEventListener('click', () => moveSlide(1));
+            document.querySelector('.prev').addEventListener('click', () => moveSlide(1));
+        });
     </script>
     
 </body>

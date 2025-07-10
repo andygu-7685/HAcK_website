@@ -15,21 +15,24 @@ h1 {
 
 .slideshow-container {
     position: relative;
-    max-width: 800px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
 .slide {
-    display: none;
     width: 100%;
 }
 
 .slide img {
     width: 100%;
-    height: 400px;
-    object-fit: cover;
+    height: 500px;
+    object-fit: scale-down;
 }
 
+.fade {
+    animation-name: fade;
+    animation-duration: 5s;
+}
 .prev, .next {
     position: right;
     top: 50%;
@@ -40,6 +43,14 @@ h1 {
     background-color: black;
     font-weight: bold;
     cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
 }
 
 .dot {
