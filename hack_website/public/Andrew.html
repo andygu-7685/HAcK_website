@@ -1,14 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <title>Andrew</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="Andrew.css">
-</head>
 
 <body>
+    <h1>
+        Welcome to my website!
+    </h1>
+    
+    
+    <div class="slideshow-container">
+        <div class="slide fade">
+        <img src="GT2RS.png" alt="Description 1">
+        <div class="caption">Driving a Porsche 911 GT2RS!</div>
+        </div>
+        <div class="slide fade">
+        <img src="Hiking.png" alt="Description 2">
+        <div class="caption">Hiking in Vegas #HeatResistant</div>
+        </div>
+        <div class="slide fade">
+        <img src="Snowboarding.png" alt="Description 3">
+        <div class="caption">Snowboarding every season!</div>
+        </div>
+    
+        
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+
+        <div class="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <div class="progress-bar"></div>
+    </div>
+
+    <script>
+    let slideIndex = 0;
+    function showSlides() {
+
+      const slides = document.getElementsByClassName("slide");
+      const dots = document.getElementsByClassName("dot");
+
+            for (let i = 0; i < slides.length;i++) {
+                slides[i].style.display = "none";
+            }
+            
+            slideIndex++;
+            if (slideIndex > slides.length)
+            {slideIndex =1}
+
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className.replace(" active","");
+            }
+
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+
+            setTime(showSlides, 10);
+    }
+
+        function plusSlides(n) {
+            slideIndex += n;
+            showSlides();
+        }
+
+        function currentSlide(n) {
+            slideIndex = n;
+            showSlides();
+        }
+    showSlides();
+    </script>
     
 </body>
 
 </html>
+    
