@@ -1,0 +1,60 @@
+  html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+    }
+  
+  body {
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    background-image: url("/bgoption1.jpg");
+    background-size: cover;       
+    background-repeat: no-repeat; 
+    background-position: center center;
+  }
+
+  .board-row {
+    display: flex;
+    position: absolute;
+    left: 300px;
+    top: 200px;
+  }
+
+  .square {
+    width: 60px;
+    height: 60px;
+    margin: 1px;
+    font-size: 24px;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #333;
+  }
+
+  .square:hover {
+    background: #eee;
+  }
+
+  .status {
+    margin-bottom: 20px;
+    font-size: 20px;
+    position: absolute;
+    left: 1300px;
+    top: 200px;
+  }
+
+  .minTitle {
+    margin-bottom: 20px;
+    font-size: 20px;
+    position: absolute;
+    left: inherit;
+    top: inherit;
+  }
+
+  .imageHold{
+    position: absolute;
+    left: 1500px;
+    top: 150px;
+    width: 400px;
+    height: 350px;
+  }
